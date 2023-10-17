@@ -18,4 +18,18 @@ RSpec.describe "Merchant API", type: :request do
       expect(merchant_data["data"][1]["attributes"]["name"]).to eq("Cummerata and Sons")
     end
   end
+
+  describe "GET /api/v1/merchants/:id" do
+    it "when a valid id is passed, it returns a single merchant" do
+      merchant_id = Merchant.first.id
+
+      get "/api/v1/merchants/#{merchant_id}"
+
+      expect(response).to have_http_status(:success)
+
+      merchant_data = JSON.parse(response.body)
+
+      expect(merchant_data["data"]["attributes"]["name"]).to eq("Gerlach-Kreiger")
+    end
+  end
 end

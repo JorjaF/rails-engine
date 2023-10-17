@@ -25,4 +25,21 @@ RSpec.describe "Item API", type: :request do
       expect(item_data["data"].count).to eq(15)
     end
   end
+
+  describe "GET /api/v1/items/:id" do
+    it "when a valid id is passed, it returns a single item" do
+      item_id = Item.first.id
+
+      get "/api/v1/items/#{item_id}"
+
+      expect(response).to have_http_status(:success)
+
+      item_data = JSON.parse(response.body)
+
+      expect(item_data["data"]["attributes"]["name"]).to eq(@list[0].name)
+      expect(item_data["data"]["attributes"]["description"]).to eq(@list[0].description)
+      expect(item_data["data"]["attributes"]["unit_price"]).to eq(@list[0].unit_price)
+      expect(item_data["data"]["attributes"]["merchant_id"]).to eq(@list[0].merchant_id)
+    end
+  end
 end
