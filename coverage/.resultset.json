@@ -265,10 +265,10 @@
         "lines": [
           1,
           1,
-          2,
-          2,
-          2,
-          2,
+          17,
+          17,
+          17,
+          17,
           null,
           null
         ]
@@ -277,7 +277,7 @@
         "lines": [
           1,
           1,
-          2,
+          7,
           null,
           null
         ]
@@ -285,8 +285,10 @@
       "/Users/jorjafleming/mod3/rails-engine/config/routes.rb": {
         "lines": [
           1,
-          null,
-          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -339,8 +341,109 @@
           1,
           null
         ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/spec/requests/api/v1/item_api_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/spec/requests/api/v1/merchant_api_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/app/controllers/api/v1/items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/app/serializers/item_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1697575602
+    "timestamp": 1697583445
   }
 }
