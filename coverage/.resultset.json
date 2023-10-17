@@ -261,9 +261,58 @@
           null
         ]
       },
+      "/Users/jorjafleming/mod3/rails-engine/spec/factories/item_factory.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/jorjafleming/mod3/rails-engine/spec/factories/merchant_factory.rb": {
         "lines": [
           1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/config/routes.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/app/models/item.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jorjafleming/mod3/rails-engine/spec/models/merchant_spec.rb": {
+        "lines": [
           1,
           null,
           1,
@@ -271,8 +320,10 @@
           2,
           null,
           null,
-          null,
           1,
+          2,
+          null,
+          null,
           1,
           1,
           null,
@@ -288,25 +339,8 @@
           1,
           null
         ]
-      },
-      "/Users/jorjafleming/mod3/rails-engine/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/jorjafleming/mod3/rails-engine/config/routes.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1697501280
+    "timestamp": 1697575602
   }
 }
