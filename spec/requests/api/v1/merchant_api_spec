@@ -16,6 +16,9 @@ RSpec.describe 'Merchant API', type: :request do
       expect(merchant1_data["description"]).to eq("This is a description")
       expect(merchant1_data["unit_price"]).to eq(1.5)
       expect(merchant1_data['id']).to eq(@merchant1.id)
+
+      merchant2_data = merchant['data'].find { |merchant| merchant['id'] == "@merchant2.id"} [atributes]
+      expect(merchant2_data['name']).to eq(@merchant2.name)
     end
   end
 end
