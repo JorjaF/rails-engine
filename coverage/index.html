@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-18T10:51:22-06:00">2023-10-18T10:51:22-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-18T14:50:27-06:00">2023-10-18T14:50:27-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  100.0%
+  99.04%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.55
+         3.02
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>160</b> relevant lines,
-    <span class="green"><b>160</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
+    <b>209</b> relevant lines,
+    <span class="green"><b>207</b> lines covered</span> and
+    <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
-  100.0%
+  99.04%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2e9692e3e98a7fb475922c0bfaef810fbb04bb03" class="src_link" title="app/controllers/api/v1/items_controller.rb">app/controllers/api/v1/items_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.11</td>
+            <td class="green strong cell--number t-file__coverage">93.10 %</td>
+            <td class="cell--number">50</td>
+            <td class="cell--number">29</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">1.48</td>
             
           </tr>
         
@@ -143,7 +143,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.50</td>
+            <td class="cell--number">2.50</td>
             
           </tr>
         
@@ -264,7 +264,7 @@
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">11.67</td>
+            <td class="cell--number">61.67</td>
             
           </tr>
         
@@ -275,7 +275,7 @@
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">6.33</td>
+            <td class="cell--number">8.67</td>
             
           </tr>
         
@@ -293,11 +293,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#996b7cbe8a7940f60095ad66741f559278882d91" class="src_link" title="spec/requests/api/v1/item_api_spec.rb">spec/requests/api/v1/item_api_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">58</td>
-            <td class="cell--number">33</td>
-            <td class="cell--number">33</td>
+            <td class="cell--number">125</td>
+            <td class="cell--number">62</td>
+            <td class="cell--number">62</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.16</td>
             
           </tr>
         
@@ -334,7 +334,7 @@
     <h3>app/controllers/api/v1/items_controller.rb</h3>
     <h4>
       <span class="green">
-  100.0%
+  93.1%
 </span>
 
       lines covered
@@ -343,9 +343,9 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>29</b> relevant lines.
+      <span class="green"><b>27</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
 
     
@@ -511,6 +511,391 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def create</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="17">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    item = Item.new(item_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="18">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    merchant = Merchant.new(merchant_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="20">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    if item.valid? &amp;&amp; merchant.valid?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      item.save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      merchant.save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      render json: ItemSerializer.new(item), status: :created</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="25">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      if item.errors.any? &amp;&amp; merchant.errors.any?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">        error_message = &quot;Validation failed: please enter valid attributes&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="27">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      elsif item.errors.any?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="28">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        error_message = &quot;Validation failed: please enter all fields&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">      else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">        error_message = &quot;Validation failed: please enter valid attributes&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="33">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      render_error_response(error_message)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def item_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="40">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    params.permit(:name, :description, :unit_price, :merchant_id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def merchant_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="44">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    params.permit(:name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="47">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def render_error_response(error_message)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="48">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    render json: ErrorSerializer.serialize(error_message), status: :unprocessable_entity</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -1081,8 +1466,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="3">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="4" data-linenumber="3">
+            <span class="hits">4</span>
             
 
             
@@ -1103,8 +1488,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="4" data-linenumber="5">
+            <span class="hits">4</span>
             
 
             
@@ -3223,7 +3608,7 @@
 
             
 
-            <code class="ruby">      resources :items, only: [:index, :show]</code>
+            <code class="ruby">      resources :items, only: [:index, :show, :create, :update, :destroy]</code>
           </li>
         </div>
       
@@ -3314,8 +3699,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="3">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="92" data-linenumber="3">
+            <span class="hits">92</span>
             
 
             
@@ -3325,8 +3710,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="4">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="92" data-linenumber="4">
+            <span class="hits">92</span>
             
 
             
@@ -3336,8 +3721,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="5">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="92" data-linenumber="5">
+            <span class="hits">92</span>
             
 
             
@@ -3347,8 +3732,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="6">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="92" data-linenumber="6">
+            <span class="hits">92</span>
             
 
             
@@ -3433,8 +3818,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="3">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="24" data-linenumber="3">
+            <span class="hits">24</span>
             
 
             
@@ -3702,8 +4087,8 @@
     
 
     <div class="t-line-summary">
-      <b>33</b> relevant lines.
-      <span class="green"><b>33</b> lines covered</span> and
+      <b>62</b> relevant lines.
+      <span class="green"><b>62</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3754,29 +4139,29 @@
 
             
 
-            <code class="ruby">  describe &quot;GET /api/v1/items&quot; do</code>
+            <code class="ruby">  before(:each) do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="5">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">    it &quot;returns all items&quot; do</code>
+            <code class="ruby">    @merchant = create(:merchant)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="6">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">      items = create_list(:item, 15)</code>
+            <code class="ruby">    @items = create_list(:item, 15)</code>
           </li>
         </div>
       
@@ -3787,29 +4172,29 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="9">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      get &quot;/api/v1/items&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby"></code>
+            <code class="ruby">  describe &quot;GET /api/v1/items&quot; do</code>
           </li>
         </div>
       
@@ -3820,12 +4205,23 @@
 
             
 
-            <code class="ruby">      expect(response).to have_http_status(:success)</code>
+            <code class="ruby">    it &quot;returns all items&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      get &quot;/api/v1/items&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -3836,35 +4232,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
+          <li class="covered" data-hits="1" data-linenumber="13">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      item_data = JSON.parse(response.body)</code>
+            <code class="ruby">      expect(response).to have_http_status(:success)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
             
 
-            <code class="ruby">      </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(item_data[&quot;data&quot;][0][&quot;attributes&quot;][&quot;name&quot;]).to eq(items[0].name)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3875,18 +4260,18 @@
 
             
 
-            <code class="ruby">      expect(item_data[&quot;data&quot;][0][&quot;attributes&quot;][&quot;description&quot;]).to eq(items[0].description)</code>
+            <code class="ruby">      item_data = JSON.parse(response.body)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="16">
+            
             
 
             
 
-            <code class="ruby">      expect(item_data[&quot;data&quot;][0][&quot;attributes&quot;][&quot;unit_price&quot;]).to eq(items[0].unit_price) # Convert to string</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3897,29 +4282,29 @@
 
             
 
-            <code class="ruby">      expect(item_data[&quot;data&quot;][0][&quot;attributes&quot;][&quot;merchant_id&quot;]).to eq(items[0].merchant_id)</code>
+            <code class="ruby">      expect(item_data[&quot;data&quot;][0][&quot;attributes&quot;][&quot;name&quot;]).to eq(@items[0].name)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      expect(item_data[&quot;data&quot;][0][&quot;attributes&quot;][&quot;description&quot;]).to eq(@items[0].description)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      # sanity check</code>
+            
+
+            <code class="ruby">      expect(item_data[&quot;data&quot;][0][&quot;attributes&quot;][&quot;unit_price&quot;]).to eq(@items[0].unit_price)</code>
           </li>
         </div>
       
@@ -3930,18 +4315,18 @@
 
             
 
-            <code class="ruby">      expect(item_data[&quot;data&quot;][14][&quot;attributes&quot;][&quot;name&quot;]).to eq(items[14].name)</code>
+            <code class="ruby">      expect(item_data[&quot;data&quot;][0][&quot;attributes&quot;][&quot;merchant_id&quot;]).to eq(@items[0].merchant_id)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="21">
+            
             
 
             
 
-            <code class="ruby">      expect(item_data[&quot;data&quot;][14][&quot;attributes&quot;][&quot;merchant_id&quot;]).to eq(items[14].merchant_id)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3952,7 +4337,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      # sanity check</code>
           </li>
         </div>
       
@@ -3963,18 +4348,18 @@
 
             
 
-            <code class="ruby">      expect(item_data[&quot;data&quot;].count).to eq(15)</code>
+            <code class="ruby">      expect(item_data[&quot;data&quot;][14][&quot;attributes&quot;][&quot;name&quot;]).to eq(@items[14].name)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      expect(item_data[&quot;data&quot;][14][&quot;attributes&quot;][&quot;merchant_id&quot;]).to eq(@items[14].merchant_id)</code>
           </li>
         </div>
       
@@ -3985,51 +4370,51 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&quot;data&quot;].count).to eq(15)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  describe &quot;GET /api/v1/items/:id&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &quot;when a valid id is passed, it returns a single item&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      item = create(:item, name: &quot;Awesome Linen Plate&quot;, description: &quot;This is a test description&quot;, unit_price: 1.5, merchant_id: 1)</code>
           </li>
         </div>
       
@@ -4040,7 +4425,7 @@
 
             
 
-            <code class="ruby">      item2 = create(:item, name: &quot;Boring Linen Plate&quot;, description: &quot;This is a test description&quot;, unit_price: 1.5, merchant_id: 1)</code>
+            <code class="ruby">  describe &quot;GET /api/v1/items/:id&quot; do</code>
           </li>
         </div>
       
@@ -4051,18 +4436,18 @@
 
             
 
-            <code class="ruby">      item_id = item.id</code>
+            <code class="ruby">    it &quot;when a valid id is passed, it returns a single item&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      item = @items.first</code>
           </li>
         </div>
       
@@ -4073,12 +4458,23 @@
 
             
 
-            <code class="ruby">      get &quot;/api/v1/items/#{item_id}&quot;</code>
+            <code class="ruby">      item2 = @items.last</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="covered" data-hits="1" data-linenumber="34">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      item_id = item.id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -4089,7 +4485,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
+          <li class="covered" data-hits="1" data-linenumber="36">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      get &quot;/api/v1/items/#{item_id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="38">
             <span class="hits">1</span>
             
 
@@ -4100,46 +4518,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="36">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      item_data = JSON.parse(response.body)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;name&quot;]).to eq(item.name)</code>
           </li>
         </div>
       
@@ -4150,56 +4535,12 @@
 
             
 
-            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;description&quot;]).to eq(item.description)</code>
+            <code class="ruby">      item_data = JSON.parse(response.body)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;unit_price&quot;]).to eq(item.unit_price) </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;merchant_id&quot;]).to eq(item.merchant_id)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;name&quot;]).not_to eq(item2.name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -4210,117 +4551,62 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;name&quot;]).to eq(item.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;description&quot;]).to eq(item.description)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="44">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;unit_price&quot;]).to eq(item.unit_price)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;merchant_id&quot;]).to eq(item.merchant_id)</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="covered" data-hits="1" data-linenumber="46">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    it &quot;gives a 404 when there is an invalid item ID input&quot; do</code>
+            <code class="ruby">      expect(item_data[&quot;data&quot;][&quot;attributes&quot;][&quot;name&quot;]).not_to eq(item2.name)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      get &quot;/api/v1/items/invalid_id&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="48">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(response).to have_http_status(404)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="50">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      json_response = JSON.parse(response.body)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
-            
-
-            <code class="ruby">      </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(json_response).to include(</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="54">
-            
-            
-
-            
-
-            <code class="ruby">        &quot;error&quot; =&gt; &quot;Couldn&#39;t find Item with &#39;id&#39;=invalid_id&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="55">
-            
-            
-
-            
-
-            <code class="ruby">      )</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -4331,7 +4617,139 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;gives a 404 when there is an invalid item ID input&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      get &quot;/api/v1/items/invalid_id&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response).to have_http_status(404)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="54">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      json_response = JSON.parse(response.body)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="55">
+            
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="56">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(json_response).to include(</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="57">
+            
+            
+
+            
+
+            <code class="ruby">        &quot;error&quot; =&gt; &quot;Couldn&#39;t find Item with &#39;id&#39;=invalid_id&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="58">
+            
+            
+
+            
+
+            <code class="ruby">      )</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="59">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="60">
             
             
 
@@ -4342,7 +4760,711 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="61">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="62">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &quot;POST /api/v1/items&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    let(:valid_attributes) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="64">
+            
+            
+
+            
+
+            <code class="ruby">      {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        name: &#39;Widget&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby">        description: &#39;High quality widget&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby">        unit_price: 100.99,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
+            
+            
+
+            
+
+            <code class="ruby">        merchant_id: @merchant.id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="69">
+            
+            
+
+            
+
+            <code class="ruby">      }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    let(:invalid_attributes) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
+            
+            
+
+            
+
+            <code class="ruby">      {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="74">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        name: &#39;Widget&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="75">
+            
+            
+
+            
+
+            <code class="ruby">        description: 87,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="76">
+            
+            
+
+            
+
+            <code class="ruby">        unit_price: 4.12, </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="77">
+            
+            
+
+            
+
+            <code class="ruby">        merchant_id: @merchant.id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="78">
+            
+            
+
+            
+
+            <code class="ruby">      }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="79">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="80">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="81">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;creates a new item&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="82">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      @merchant = create(:merchant)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="83">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="84">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      post &#39;/api/v1/items&#39;, params: valid_attributes</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="85">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="86">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response).to have_http_status(:created)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="87">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="88">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      item_data = JSON.parse(response.body)[&#39;data&#39;][&#39;attributes&#39;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="89">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="90">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&#39;name&#39;]).to eq(&#39;Widget&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="91">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&#39;description&#39;]).to eq(&#39;High quality widget&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="92">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&#39;unit_price&#39;]).to eq(100.99)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="93">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(item_data[&#39;merchant_id&#39;]).to eq(@merchant.id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="94">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="95">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="96">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;will not create an item with invalid attributes&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="97">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      post &#39;/api/v1/items&#39;, params: { item: invalid_attributes } </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="98">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="99">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response).to have_http_status(:unprocessable_entity)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="100">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="101">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      error_response = JSON.parse(response.body)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="102">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(error_response[&#39;error&#39;]).to include(&quot;Validation failed: please enter all fields&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="103">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="104">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="105">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="106">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  context &#39;with missing attributes&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="107">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    let(:missing_attributes) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="108">
+            
+            
+
+            
+
+            <code class="ruby">      {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="109">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        name: &#39;Widget&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="110">
+            
+            
+
+            
+
+            <code class="ruby">        description: &#39;High quality widget&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="111">
+            
+            
+
+            
+
+            <code class="ruby">        # unit_price and merchant_id are missing</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="112">
+            
+            
+
+            
+
+            <code class="ruby">      }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="113">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="114">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="115">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns an error for missing attributes&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="116">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      post &#39;/api/v1/items&#39;, params: missing_attributes</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="117">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="118">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response).to have_http_status(:unprocessable_entity)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="119">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="120">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      error_response = JSON.parse(response.body)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="121">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="122">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(error_response[&#39;error&#39;]).to include(&quot;Validation failed: please enter all fields&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="123">
+            
+            
+
+            
+
+            <code class="ruby">    end    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="124">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="125">
             
             
 
