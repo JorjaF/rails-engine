@@ -34,6 +34,17 @@ class Api::V1::ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    item = Item.find_by(id: params[:id])
+
+    if item
+      item.destroy
+      head :no_content
+    else
+      render json: { error: "Item not found" }, status: :not_found
+    end
+  end
+
   private
 
   def item_params
