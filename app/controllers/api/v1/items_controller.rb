@@ -33,6 +33,21 @@ class Api::V1::ItemsController < ApplicationController
       render_error_response(error_message)
     end
   end
+  
+  def update
+    item = Item.find_by(id: params[:id])
+    merchant = Merchant.find_by(id: params[:merchant_id])
+    
+    if item 
+      if item.update(item_params)
+        render json: ItemSerializer.new(item), status: :ok
+      else
+        render json: { error: "Validation failed: #{item.errors.full_messages.join(', ')}" }, status: :unprocessable_entity
+      end
+    else
+      render json: { error: "Item not found" }, status: :not_found
+    end
+  end
 
   def destroy
     item = Item.find_by(id: params[:id])
