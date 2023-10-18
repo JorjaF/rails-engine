@@ -31,5 +31,17 @@ RSpec.describe "Merchant API", type: :request do
 
       expect(merchant_data["data"]["attributes"]["name"]).to eq("Gerlach-Kreiger")
     end
+
+    it "gives a 404 when there is an invalid item ID input" do
+      get "/api/v1/merchants/invalid_id"
+  
+      expect(response).to have_http_status(404)
+  
+      json_response = JSON.parse(response.body)
+      
+      expect(json_response).to include(
+        "error" => "Couldn't find Merchant with 'id'=invalid_id"
+      )
+    end
   end
 end

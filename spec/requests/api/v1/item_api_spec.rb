@@ -41,5 +41,17 @@ RSpec.describe "Item API", type: :request do
       expect(item_data["data"]["attributes"]["unit_price"]).to eq(@list[0].unit_price)
       expect(item_data["data"]["attributes"]["merchant_id"]).to eq(@list[0].merchant_id)
     end
+
+    it "gives a 404 when there is an invalid item ID input" do
+      get "/api/v1/items/invalid_id"
+  
+      expect(response).to have_http_status(404)
+  
+      json_response = JSON.parse(response.body)
+      
+      expect(json_response).to include(
+        "error" => "Couldn't find Item with 'id'=invalid_id"
+      )
+    end
   end
 end
