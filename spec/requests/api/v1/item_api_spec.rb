@@ -1,26 +1,24 @@
 require "rails_helper"
 
 RSpec.describe "Item API", type: :request do
-  before(:each) do
-    @list = create_list(:item, 15)
-  end
-
   describe "GET /api/v1/items" do
     it "returns all items" do
+      items = create_list(:item, 15)
+
       get "/api/v1/items"
 
       expect(response).to have_http_status(:success)
 
       item_data = JSON.parse(response.body)
+      
+      expect(item_data["data"][0]["attributes"]["name"]).to eq(items[0].name)
+      expect(item_data["data"][0]["attributes"]["description"]).to eq(items[0].description)
+      expect(item_data["data"][0]["attributes"]["unit_price"]).to eq(items[0].unit_price) # Convert to string
+      expect(item_data["data"][0]["attributes"]["merchant_id"]).to eq(items[0].merchant_id)
 
-      expect(item_data["data"][0]["attributes"]["name"]).to eq(@list[0].name)
-      expect(item_data["data"][0]["attributes"]["description"]).to eq(@list[0].description)
-      expect(item_data["data"][0]["attributes"]["unit_price"]).to eq(@list[0].unit_price)
-      expect(item_data["data"][0]["attributes"]["merchant_id"]).to eq(@list[0].merchant_id)
-
-      # For the sanity check, access the attributes of the second item
-      expect(item_data["data"][14]["attributes"]["name"]).to eq(@list[14].name)
-      expect(item_data["data"][14]["attributes"]["merchant_id"]).to eq(@list[14].merchant_id)
+      # sanity check
+      expect(item_data["data"][14]["attributes"]["name"]).to eq(items[14].name)
+      expect(item_data["data"][14]["attributes"]["merchant_id"]).to eq(items[14].merchant_id)
 
       expect(item_data["data"].count).to eq(15)
     end
@@ -28,7 +26,9 @@ RSpec.describe "Item API", type: :request do
 
   describe "GET /api/v1/items/:id" do
     it "when a valid id is passed, it returns a single item" do
-      item_id = Item.first.id
+      item = create(:item, name: "Awesome Linen Plate", description: "This is a test description", unit_price: 1.5, merchant_id: 1)
+      item2 = create(:item, name: "Boring Linen Plate", description: "This is a test description", unit_price: 1.5, merchant_id: 1)
+      item_id = item.id
 
       get "/api/v1/items/#{item_id}"
 
@@ -36,10 +36,11 @@ RSpec.describe "Item API", type: :request do
 
       item_data = JSON.parse(response.body)
 
-      expect(item_data["data"]["attributes"]["name"]).to eq(@list[0].name)
-      expect(item_data["data"]["attributes"]["description"]).to eq(@list[0].description)
-      expect(item_data["data"]["attributes"]["unit_price"]).to eq(@list[0].unit_price)
-      expect(item_data["data"]["attributes"]["merchant_id"]).to eq(@list[0].merchant_id)
+      expect(item_data["data"]["attributes"]["name"]).to eq(item.name)
+      expect(item_data["data"]["attributes"]["description"]).to eq(item.description)
+      expect(item_data["data"]["attributes"]["unit_price"]).to eq(item.unit_price) 
+      expect(item_data["data"]["attributes"]["merchant_id"]).to eq(item.merchant_id)
+      expect(item_data["data"]["attributes"]["name"]).not_to eq(item2.name)
     end
 
     it "gives a 404 when there is an invalid item ID input" do

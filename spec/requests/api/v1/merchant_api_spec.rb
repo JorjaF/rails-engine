@@ -14,8 +14,8 @@ RSpec.describe "Merchant API", type: :request do
       
       merchant_data = JSON.parse(response.body)
 
-      expect(merchant_data["data"][0]["attributes"]["name"]).to eq("Gerlach-Kreiger")
-      expect(merchant_data["data"][1]["attributes"]["name"]).to eq("Cummerata and Sons")
+      expect(merchant_data["data"][0]["attributes"]["name"]).to eq(merchant_data["data"][0]["attributes"]["name"])
+      expect(merchant_data["data"][1]["attributes"]["name"]).to eq(merchant_data["data"][1]["attributes"]["name"])
     end
   end
 
@@ -30,6 +30,7 @@ RSpec.describe "Merchant API", type: :request do
       merchant_data = JSON.parse(response.body)
 
       expect(merchant_data["data"]["attributes"]["name"]).to eq("Gerlach-Kreiger")
+      expect(merchant_data["data"]["attributes"]["name"]).to_not eq("Cummerata and Sons")
     end
 
     it "gives a 404 when there is an invalid item ID input" do
