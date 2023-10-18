@@ -122,4 +122,21 @@ RSpec.describe "Item API", type: :request do
       expect(error_response['error']).to include("Validation failed: please enter all fields")
     end    
   end
+
+  describe "DELETE /api/v1/items/:id" do
+    let(:item) { create(:item) }
+
+    it 'deletes an item' do
+      delete "/api/v1/items/#{item.id}"
+
+      expect(response).to have_http_status(:no_content)
+      expect(Item.find_by(id: item.id)).to be_nil
+    end
+
+    it 'returns a 404 status if the item is not found' do
+      delete "/api/v1/items/999" # Assuming there is no item with ID 999
+
+      expect(response).to have_http_status(:not_found)
+    end
+  end
 end
