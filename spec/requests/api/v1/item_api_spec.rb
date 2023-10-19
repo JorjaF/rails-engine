@@ -180,18 +180,20 @@ RSpec.describe "Item API", type: :request do
 
   describe "DELETE /api/v1/items/:id" do
     let(:item) { create(:item) }
-
+  
     it 'deletes an item' do
       delete "/api/v1/items/#{item.id}"
-
-      expect(response).to have_http_status(:no_content)
+  
+      expect(response).to have_http_status(:ok)
+      expect(response.body).to include("Item deleted successfully")
       expect(Item.find_by(id: item.id)).to be_nil
     end
-
+  
     it 'returns a 404 status if the item is not found' do
-      delete "/api/v1/items/999" # Assuming there is no item with ID 999
-
+      delete "/api/v1/items/999"
+  
       expect(response).to have_http_status(:not_found)
+      expect(response.body).to include("Item or merchant not found")
     end
   end
 end
