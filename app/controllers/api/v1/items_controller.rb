@@ -48,17 +48,19 @@ class Api::V1::ItemsController < ApplicationController
       render json: { error: "Item not found" }, status: :not_found
     end
   end
+  #this passes the test but i cant get the edge case to pass on postman
 
   def destroy
     item = Item.find_by(id: params[:id])
-
-    if item
+      
+    if item && item.merchant
       item.destroy
-      head :no_content
+      render json: { message: "Item deleted successfully" }, status: :ok
     else
-      render json: { error: "Item not found" }, status: :not_found
+      render json: { error: "Item or merchant not found" }, status: :not_found
     end
   end
+  
 
   private
 
