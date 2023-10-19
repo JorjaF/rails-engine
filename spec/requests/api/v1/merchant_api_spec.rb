@@ -40,9 +40,7 @@ RSpec.describe "Merchant API", type: :request do
   
       json_response = JSON.parse(response.body)
       
-      expect(json_response).to include(
-        "error" => "Couldn't find Merchant with 'id'=invalid_id"
-      )
+      expect(json_response["error"]).to eq("Couldn't find Merchant with 'id'=invalid_id")
     end
   end
 end

@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'Merchant Items API', type: :request do
-  describe "GET /api/v1/merchants/{{merchant_id}}/items" do
+  describe "'GET /api/v1/merchants/{{merchant_id}}/items" do
     let(:merchant) { create(:merchant) }
+    let(:merchant2) { create(:merchant) }
     let!(:items_merchant) { create_list(:item, 3, merchant: merchant) }
+    let!(:items_merchant2) { create_list(:item, 1, merchant: merchant2) }
 
     context 'when the merchant exists' do
       before do
@@ -23,14 +25,14 @@ RSpec.describe 'Merchant Items API', type: :request do
       end
       #sanity check
 
-      # it 'does not return items associated with other merchants' do
-      #   get "/api/v1/merchants/#{merchant2.id}/items"
-      #   json_response = JSON.parse(response.body)
+      it 'does not return items associated with other merchants' do
+        get "/api/v1/merchants/#{merchant2.id}/items"
+        json_response = JSON.parse(response.body)
 
-      #   expect(json_response['data'].count).to eq(items_merchant2.count)
-      #   expect(json_response['data'].first['attributes']['name']).to eq(items_merchant2.first.name)
-      #   expect(json_response['data'].last['attributes']['name']).to eq(items_merchant2.last.name)
-      # end
+        expect(json_response['data'].count).to eq(items_merchant2.count)
+        expect(json_response['data'].first['attributes']['name']).to eq(items_merchant2.first.name)
+        expect(json_response['data'].last['attributes']['name']).to eq(items_merchant2.last.name)
+      end
     end
   end
 end
