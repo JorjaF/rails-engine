@@ -165,16 +165,17 @@ RSpec.describe "Item API", type: :request do
 
 
     it 'returns a 404 status if the item is not found' do
-      patch "/api/v1/items/999", params: { item: valid_attributes }
-      # this test is passing but not passing in postman
+      patch "/api/v1/items/999999999999", params: { item: valid_attributes }
+      
       expect(response).to have_http_status(:not_found)
     end
 
     it "will not change an item with and invalid merchant id" do
-      patch "/api/v1/items/5", params: { item: invalid_attributes }
-    
+      put "/api/v1/items/5", params: { item: invalid_attributes }
+  
       expect(response).to have_http_status(:not_found)
       expect(response.body).to include("Item not found")
+      # this test is passing but not passing in postman
     end
   end
 
