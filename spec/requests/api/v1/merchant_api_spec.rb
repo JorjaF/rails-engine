@@ -21,16 +21,16 @@ RSpec.describe "Merchant API", type: :request do
 
   describe "GET /api/v1/merchants/:id" do
     it "when a valid id is passed, it returns a single merchant" do
-      merchant_id = Merchant.first.id
+      merchant = Merchant.first
 
-      get "/api/v1/merchants/#{merchant_id}"
+      get "/api/v1/merchants/#{merchant.id}"
 
       expect(response).to have_http_status(:success)
 
       merchant_data = JSON.parse(response.body)
 
-      expect(merchant_data["data"]["attributes"]["name"]).to eq("Gerlach-Kreiger")
-      expect(merchant_data["data"]["attributes"]["name"]).to_not eq("Cummerata and Sons")
+      expect(merchant_data["data"]["attributes"]["name"]).to eq(merchant.name)
+      expect(merchant_data["data"]["attributes"]["name"]).to_not eq(Merchant.last.name)
     end
 
     it "gives a 404 when there is an invalid item ID input" do

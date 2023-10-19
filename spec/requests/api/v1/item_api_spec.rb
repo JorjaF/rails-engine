@@ -13,10 +13,10 @@ RSpec.describe "Item API", type: :request do
       expect(response).to have_http_status(:success)
 
       item_data = JSON.parse(response.body)
-
+      # require 'pry'; binding.pry
       expect(item_data["data"][0]["attributes"]["name"]).to eq(@items[0].name)
       expect(item_data["data"][0]["attributes"]["description"]).to eq(@items[0].description)
-      expect(item_data["data"][0]["attributes"]["unit_price"]).to eq(@items[0].unit_price)
+      expect(item_data["data"][0]["attributes"]["unit_price"]).to eq(@items[0].unit_price.to_f) # Convert to float for comparison
       expect(item_data["data"][0]["attributes"]["merchant_id"]).to eq(@items[0].merchant_id)
 
       # Sanity check
@@ -26,6 +26,7 @@ RSpec.describe "Item API", type: :request do
       expect(item_data["data"].count).to eq(15)
     end
   end
+  #this was working but some how at 4 on thusday it stopped working and i cant figure out why
 
   describe "GET /api/v1/items/:id" do
     it "returns a single item when a valid ID is passed" do
@@ -142,7 +143,7 @@ RSpec.describe "Item API", type: :request do
     end
 
     it 'updates an item with valid attributes' do
-      item = create(:item, name: "Gorgeous Aluminum Wallet", description: "Porro quis animi ducimus.", unit_price: 6.67, merchant_id: 5)
+      item = create(:item, name: "Gorgeous Aluminum Wallet", description: "Porro quis animi ducimus.", unit_price: 6.67)
       patch "/api/v1/items/#{item.id}", params: { item: valid_attributes }
     
       expect(response).to have_http_status(:ok)
@@ -154,7 +155,7 @@ RSpec.describe "Item API", type: :request do
       expect(attributes["name"]).to eq("Gorgeous Aluminum Wallet")
       expect(attributes["description"]).to eq("Porro quis animi ducimus.")
       expect(attributes["unit_price"]).to eq(6.67)
-      expect(attributes["merchant_id"]).to eq(5)
+      expect(attributes["merchant_id"]).to eq(item.merchant.id)
       
       updated_attributes = valid_attributes
       expect(valid_attributes[:name]).to eq(valid_attributes[:name])
