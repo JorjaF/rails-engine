@@ -54,14 +54,13 @@ class Api::V1::ItemsController < ApplicationController
       if item.update(item_params)
         render json: ItemSerializer.new(item), status: :ok
       else
-        render json: { error: "Validation failed: #{item.errors.full_messages.join(', ')}" }, status: :unprocessable_entity
+        render json: { error: "Validation failed: #{item.errors.full_messages.join(', ')}" }, status: :not_found
       end
     else
       render json: { error: "Item not found" }, status: :not_found
     end
   end
-  #this passes the test but i cant get the edge case to pass on postman
-
+  
   def destroy
     item = Item.find_by(id: params[:id])
       

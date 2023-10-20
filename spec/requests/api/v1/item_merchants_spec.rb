@@ -16,7 +16,7 @@ RSpec.describe "Items Merchants API", type: :request do
     end
 
     it "returns the merchant data for the item" do
-      json_response = JSON.parse(response.body)["data"] # Adjust parsing to match serialized format
+      json_response = JSON.parse(response.body)["data"] 
       expect(json_response).not_to be_empty
       expect(json_response["id"]).to eq(merchant.id.to_s) #idk why this is a string
       expect(json_response["attributes"]["name"]).to eq(merchant.name)
