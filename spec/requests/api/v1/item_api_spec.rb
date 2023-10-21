@@ -13,7 +13,7 @@ RSpec.describe "Item API", type: :request do
       expect(response).to have_http_status(:success)
 
       item_data = JSON.parse(response.body)
-      # require 'pry'; binding.pry
+      
       expect(item_data["data"][0]["attributes"]["name"]).to eq(@items[0].name)
       expect(item_data["data"][0]["attributes"]["description"]).to eq(@items[0].description)
       expect(item_data["data"][0]["attributes"]["unit_price"]).to eq(@items[0].unit_price.to_f) # Convert to float for comparison
@@ -26,7 +26,6 @@ RSpec.describe "Item API", type: :request do
       expect(item_data["data"].count).to eq(15)
     end
   end
-  #this was working but some how at 4 on thusday it stopped working and i cant figure out why
 
   describe "GET /api/v1/items/:id" do
     it "returns a single item when a valid ID is passed" do
